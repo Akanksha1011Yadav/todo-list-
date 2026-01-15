@@ -1,0 +1,40 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    color: azure;
+    text-decoration: none;
+
+}
+.div{
+    height: 500px;
+    width: 500px;
+    display: inline-block;
+    margin-right: 100 px;
+    }
+ #content{
+    height: 242px;
+    margin-right: 100px ;
+ }   
+#navbar{
+    height: 60px;
+    background-color: black;
+}
+button{
+    background-color: orange;
+    color: black;
+}
+#logo{
+    color: orange;
+    font-size: large;
+    text-decoration: none;
+}
+a{
+    margin-right: 200px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

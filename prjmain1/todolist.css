@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #153677, #4e085f);
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns to top, better for scrolling lists */
+    padding-top: 80px;
+}
+
+.container {
+    width: 100%;
+    max-width: 740px;
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Input Row */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px; 
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #c53525;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e04835;
+}
+
+/* Validation Error Message */
+.error {
+    color: #ff5945;
+    font-size: 14px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+/* List Items */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #edeef0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom Checkbox Circle */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/10729/10729094.png'); /* Unchecked icon */
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+/* Completed State */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/5290/5290058.png'); /* Checked icon */
+}
+
+/* Action Buttons Container (Edit/Delete) */
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions span {
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.task-actions span:hover {
+    background: #edeef0;
+}
+
+.delete-btn {
+    color: #ff5945;
+}
+
+.edit-btn {
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .container {
+        padding: 20px;
+    }
+    button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    input {
+        font-size: 14px;
+    }
+}
