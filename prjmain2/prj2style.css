@@ -26,7 +26,7 @@ body {
 }
 /* FIX ENDS HERE */
 
-/* Paper Container */
+
 .container {
     width: 100%;
     max-width: 750px;
@@ -59,14 +59,13 @@ body {
     padding-bottom: 5px;
 }
 
-/* Input Row */
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: transparent;
     margin-bottom: 10px;
-    border: 2px dashed #aaa; /* Dashed box for input area */
+    border: 2px dashed #aaa; 
     border-radius: 5px;
     padding: 5px;
 }
@@ -107,20 +106,18 @@ button:hover {
     padding-left: 5px;
 }
 
-/* Notebook Lines for the List */
 ul li {
     list-style: none;
-    font-size: 22px; /* Bigger text for handwriting */
+    font-size: 22px;
     padding: 12px 8px 12px 10px;
     user-select: none;
     cursor: pointer;
     position: relative;
-    /* The Blue Line Effect */
     border-bottom: 1px solid #a4b0be; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #2c3e50; /* Ink blue-black */
+    color: #2c3e50;
 }
 
 /* Custom Checkbox (Hand-drawn box style) */
@@ -149,11 +146,10 @@ ul li {
     margin-left: 10px;
 }
 
-/* Checked State - Scribble effect */
 ul li.checked {
     color: #999;
     text-decoration: line-through;
-    text-decoration-color: #2e7d32; /* Green strikethrough */
+    text-decoration-color: #2e7d32; 
 }
 
 /* Icons */

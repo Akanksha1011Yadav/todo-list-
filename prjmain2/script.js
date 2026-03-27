@@ -3,7 +3,6 @@ const listContainer = document.getElementById("list-container");
 const errorMessage = document.getElementById("error-message");
 const dateDisplay = document.getElementById("date-display");
 
-// 1. Set Today's Date
 const today = new Date();
 const options = { weekday: 'long', month: 'short', day: 'numeric' };
 dateDisplay.innerHTML = "Date: " + today.toLocaleDateString('en-US', options);
@@ -13,16 +12,14 @@ function addTask() {
         errorMessage.textContent = "Please write a task first!";
     } else {
         errorMessage.textContent = ""; 
-        
-        let li = document.createElement("li");
 
-        // Task Text
+        let li = document.createElement("li");
+        
         let textSpan = document.createElement("span");
         textSpan.textContent = inputBox.value;
         textSpan.classList.add("task-text");
         li.appendChild(textSpan);
 
-        // Actions (Edit/Delete)
         let div = document.createElement("div");
         div.classList.add("task-actions");
 
@@ -43,9 +40,8 @@ function addTask() {
     saveData();
 }
 
-// Event Listeners
 listContainer.addEventListener("click", function(e) {
-    // Click on text or LI to toggle complete
+  
     if (e.target.tagName === "LI" || e.target.classList.contains("task-text")) {
         let targetLi = e.target.tagName === "LI" ? e.target : e.target.parentElement;
         targetLi.classList.toggle("checked");
