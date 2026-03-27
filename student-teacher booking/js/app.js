@@ -1,8 +1,5 @@
-// GLOBAL VARIABLE FOR EDIT
 let editIndex = -1;
 
-
-// REGISTER
 function register(){
 
 let name=document.getElementById("name").value
@@ -18,7 +15,6 @@ window.location="index.html"
 }
 
 
-// LOGIN
 function login(){
 
 let email=document.getElementById("email").value
@@ -41,13 +37,11 @@ alert("Invalid Login")
 }
 
 
-// LOGOUT
 function logout(){
 window.location="index.html"
 }
 
 
-// SEARCH TEACHER
 function searchTeacher(){
 
 let teachers=JSON.parse(localStorage.getItem("teachers")) || []
@@ -75,7 +69,6 @@ ${t.dept} - ${t.subject}
 }
 
 
-// BOOK APPOINTMENT
 function bookAppointment(){
 
 let teacher=document.getElementById("teacherName").value
@@ -106,7 +99,6 @@ document.getElementById("time").value=""
 }
 
 
-// SEND MESSAGE
 function sendMessage(){
 
 let msg=document.getElementById("message").value
@@ -125,7 +117,6 @@ document.getElementById("message").value=""
 }
 
 
-// ADD OR UPDATE TEACHER
 function addTeacher(){
 
 let name=document.getElementById("tname").value
@@ -139,7 +130,6 @@ return
 
 let teachers=JSON.parse(localStorage.getItem("teachers")) || []
 
-// UPDATE MODE
 if(editIndex !== -1){
 
 teachers[editIndex] = {
@@ -177,8 +167,6 @@ showTeachers()
 
 }
 
-
-// SHOW TEACHERS
 function showTeachers(){
 
 let teachers=JSON.parse(localStorage.getItem("teachers")) || []
@@ -212,7 +200,6 @@ ${t.dept} - ${t.subject}
 }
 
 
-// EDIT TEACHER
 function editTeacher(index){
 
 let teachers=JSON.parse(localStorage.getItem("teachers")) || []
@@ -229,8 +216,6 @@ document.getElementById("addBtn").innerText="Update Teacher"
 
 }
 
-
-// DELETE TEACHER
 function deleteTeacher(index){
 
 let teachers=JSON.parse(localStorage.getItem("teachers")) || []
@@ -243,8 +228,6 @@ showTeachers()
 
 }
 
-
-// SHOW APPOINTMENTS IN ADMIN PANEL
 function loadAppointments(){
 
 let appointments=JSON.parse(localStorage.getItem("appointments")) || []
@@ -295,11 +278,11 @@ loadAppointments()
 
 }
 
-// PAGE LOAD
+
 window.onload=function(){
 
-showTeachers();      // loads teachers in admin panel
-loadAppointments();  // loads appointments in admin panel
-searchTeacher();     // loads teachers in student dashboard
+showTeachers();      
+loadAppointments();  
+searchTeacher();     
 
 }

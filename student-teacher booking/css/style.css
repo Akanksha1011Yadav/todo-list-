@@ -1,11 +1,10 @@
-/* General page styling */
+
 body{
 font-family:'Segoe UI', Arial, sans-serif;
 background:#f5f7fb;
 margin:0;
 }
 
-/* Navbar (Dashboard) */
 .navbar{
 background:#1f2937;
 color:white;
@@ -34,7 +33,7 @@ font-size:14px;
 background:#dc2626;
 }
 
-/* Center container (Login/Register) */
+
 .main-container{
 height:100vh;
 display:flex;
@@ -42,7 +41,7 @@ justify-content:center;
 align-items:center;
 }
 
-/* Form box */
+
 .form-box{
 background:white;
 padding:35px;
@@ -57,13 +56,11 @@ margin-bottom:25px;
 color:#1e293b;
 }
 
-/* Dashboard layout */
 .dashboard{
 max-width:700px;
 margin:40px auto;
 }
 
-/* Cards (Dashboard sections) */
 .card{
 background:white;
 padding:25px;
@@ -72,7 +69,6 @@ border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Inputs */
 input, textarea{
 width:100%;
 padding:10px;
@@ -87,7 +83,6 @@ outline:none;
 border-color:#2563eb;
 }
 
-/* Buttons */
 button{
 padding:10px;
 background:#2563eb;
@@ -102,7 +97,6 @@ button:hover{
 background:#1d4ed8;
 }
 
-/* Register/Login links */
 a{
 text-decoration:none;
 color:#2563eb;
@@ -113,20 +107,17 @@ a:hover{
 text-decoration:underline;
 }
 
-/* Teacher search results */
 .teacher{
 background:#f1f5f9;
 padding:8px;
 border-radius:6px;
 margin-top:6px;
 }
-
-/* Message textarea */
 textarea{
 height:90px;
 resize:none;
 }
-/* Center only login page */
+
 .login-container{
 height:100vh;
 display:flex;
